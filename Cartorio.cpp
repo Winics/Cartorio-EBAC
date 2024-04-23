@@ -11,7 +11,7 @@
 
 int registros() //função de cadastro
 {
-	setlocale(LC_ALL, "Portuguese");
+	setlocale(LC_ALL, "Portuguese");  //localidade de idiomas
 
 	printf("  ---  Cartório da EBAC  ---\n\n");       //informação para usuario
 	printf("Digite suas informações pessoais\n\n");   //informação para usuario
@@ -25,8 +25,8 @@ int registros() //função de cadastro
 	char telefone[40];       //string
 	char cargo[40];          //string
 	
-	printf("CPF:\t\t\t");  //informação para usuario
-	scanf("%s", cpf);  //%s = referente a string
+	printf("CPF:\t\t\t");  //informação para usuário
+	scanf("%s", cpf); //scanf = Ler dados //%s = referente a string
 	
 	strcpy(arquivo, cpf); //responsavel por copiar os valores da string
 	
@@ -39,158 +39,158 @@ int registros() //função de cadastro
 	fprintf(file,","); //Adicionar "," no bloco de notas
 	fclose(file);  //fclose  = Fechar pastas
 	
-	printf("Nome:\t\t\t");  
-	scanf("%s", nome);
+	printf("Nome:\t\t\t");  //informação para usuario
+	scanf("%s", nome); //Lê a string digitada pelo usuário //%s  = salva a informação
 
-	file = fopen(arquivo, "a");
-	fprintf(file, nome);
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file, nome); //Escrever no file
+	fclose(file); //fechar
 	
-	file = fopen(arquivo, "a");
-	fprintf(file,","); //Gambiarra estética
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file,","); //Escrever no file
+	fclose(file); //fechar
 	
-	printf("Sobrenome:\t\t");
-	scanf("%s", sobrenome);
+	printf("Sobrenome:\t\t"); //informação para usuario
+	scanf("%s", sobrenome); //Lê a string digitada pelo usuário //%s  = salva a informação
 	
-	file = fopen(arquivo, "a");
-	fprintf(file,sobrenome);
-	fclose(file);
+	file = fopen(arquivo, "a");//Abrir e atualizar
+	fprintf(file,sobrenome); //Escrever no file
+	fclose(file); //fechar
 	
-	file = fopen(arquivo, "a");
-	fprintf(file, ","); //Gambiarra estética
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file, ","); //Escrever no file
+	fclose(file); //fechar
 	
-	printf("Data de nascimento:\t");
-	scanf("%s", data);
+	printf("Data de nascimento:\t"); //informação para usuario
+	scanf("%s", data); //Lê a string digitada pelo usuário //%s  = salva a informação
 	
-	file = fopen(arquivo, "a");
-	fprintf(file,data);
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file,data); //Escrever no file
+	fclose(file); //fechar
 	
-	file = fopen(arquivo, "a");
-	fprintf(file, ","); //Gambiarra estética
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file, ","); //Escrever no file
+	fclose(file); //fechar
 	
 	
-	printf("Email:\t\t\t");
-	scanf("%s", email);
+	printf("Email:\t\t\t"); //informação para usuario
+	scanf("%s", email); //Lê a string digitada pelo usuário //%s  = salva a informação
 	
-	file = fopen(arquivo, "a");
-	fprintf(file,email);
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file,email); //Escrever no file
+	fclose(file); //fechar
 	
-	file = fopen(arquivo, "a");
-	fprintf(file, ","); //Gambiarra estética
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file, ","); //Escrever no file
+	fclose(file); //fechar
 	
-	printf("Telefone:\t\t");
-	scanf("%s", telefone);
+	printf("Telefone:\t\t"); //informação para usuario
+	scanf("%s", telefone); //Lê a string digitada pelo usuário //%s  = salva a informação
 	
-	file = fopen(arquivo, "a");
-	fprintf(file,telefone);
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file,telefone); //Escrever no file
+	fclose(file); //fechar
 	
-	file = fopen(arquivo, "a");
-	fprintf(file, ","); //Gambiarra estética
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file, ","); //Escrever no file
+	fclose(file); //fechar
 	
-	printf("Cargo:\t\t\t");
-	scanf("%s", cargo);
+	printf("Cargo:\t\t\t"); //informação para usuario
+	scanf("%s", cargo); //Lê a string digitada pelo usuário //%s  = salva a informação
 	
-	file = fopen(arquivo, "a");
-	fprintf(file, cargo);
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file, cargo); //Escrever no file
+	fclose(file); //fechar
 	
-	file = fopen(arquivo, "a");
-	fprintf(file, ",");
-	fclose(file);
+	file = fopen(arquivo, "a"); //Abrir e atualizar
+	fprintf(file, ","); //Escrever no file
+	fclose(file); //fechar
 
-	system("pause");
+	system("pause"); //Congelar tela
 
 }
 
 int consultar() //função
 {
-	setlocale(LC_ALL, "Portuguese");
+	setlocale(LC_ALL, "Portuguese");  //localidade de idioma
 	
-	char cpf[40];
-	char conteudo[400];
+	char cpf[40];          //string
+	char conteudo[400];    //string
 	
-	printf("  ---  Cartório da EBAC  ---\n\n");
-	printf("- Digite CPF do Usuário -\n\n");
-	scanf("%s", cpf);
+	printf("  ---  Cartório da EBAC  ---\n\n"); //informação para usuário
+	printf("- Digite CPF do Usuário -\n\n"); //informação para usuário
+	scanf("%s", cpf); //scanf = Ler dados //%s = Salvar string
 	
-	system("cls");
+	system("cls"); //Apaga tela
 	
-	FILE *file;
-	file = fopen(cpf,"r");
+	FILE *file;  //FILE = cria //file = pasta
+	file = fopen(cpf,"r"); //fopen  = abre  // "r"  =  lê
 	
-	if(file == NULL)
+	if(file == NULL)  //if = definir ação
 	{
-		printf("CPF não localizado\n");
+		printf("CPF não localizado\n"); //informação para usuário
 	}
 	
-	while(fgets(conteudo, 400, file) != NULL)
+	while(fgets(conteudo, 400, file) != NULL)  //while = Estrutura de repetição verdadeira  //fgets = ler string
 	{
-		printf("  ---  Cartório da EBAC  ---\n\n");
-		printf("- Informações do Usuário -\n\n");
+		printf("  ---  Cartório da EBAC  ---\n\n"); //informação para usuário
+		printf("- Informações do Usuário -\n\n");  //informação para usuário
 		
-		char* token = strtok(conteudo,",");	
+		char* token = strtok(conteudo,",");	 //strtok =  Ela divide uma string fornecida em tokens (substrings) com base em um delimitador especificado.
 			
-		printf("CPF:\t\t\t%s\n", token);
-		token = strtok(NULL,",");
+		printf("CPF:\t\t\t%s\n", token); //informação para usuário
+		token = strtok(NULL,",");  //char* responsavel substituindo a "," por NULL
 		
-		printf("Nome:\t\t\t%s\n", token);
-		token = strtok(NULL,",");
+		printf("Nome:\t\t\t%s\n", token); //informação para usuário
+		token = strtok(NULL,","); //char* responsavel substituindo a "," por NULL
 		
-		printf("Sobrenome:\t\t%s\n", token);
-		token = strtok(NULL,",");
+		printf("Sobrenome:\t\t%s\n", token); //informação para usuário
+		token = strtok(NULL,","); //char* responsavel substituindo a "," por NULL
 		
-		printf("Data de nascimento:\t%s\n", token);
-		token = strtok(NULL,",");
+		printf("Data de nascimento:\t%s\n", token); //informação para usuário
+		token = strtok(NULL,","); //char* responsavel substituindo a "," por NULL
 		
-		printf("Email:\t\t\t%s\n", token);
-		token = strtok(NULL,",");
+		printf("Email:\t\t\t%s\n", token); //informação para usuário
+		token = strtok(NULL,","); //char* responsavel substituindo a "," por NULL
 		
-		printf("Telefone;\t\t%s\n", token);
-		token = strtok(NULL,",");
+		printf("Telefone;\t\t%s\n", token); //informação para usuário
+		token = strtok(NULL,","); //char* responsavel substituindo a "," por NULL
 		
-		printf("Cargo:\t\t\t%s\n", token);
-		token = strtok(NULL,",");
+		printf("Cargo:\t\t\t%s\n", token); //informação para usuário
+		token = strtok(NULL,","); ///char* responsavel substituindo a "," por NULL
 	}
 	
-	system("pause");
+	system("pause"); //Congelar Tela
 	
-	fclose(file);
+	fclose(file);  //Fechar
 
 }
 
 int deletar()  //função
 {
-	setlocale(LC_ALL, "portuguese");
+	setlocale(LC_ALL, "portuguese"); //Localidade de idioma
 	
-	char cpf[40];
+	char cpf[40];  //string
 	
-	printf("      ---  Deletar Usuário  ---\n");
-	printf("Digite o CPF do usuário a ser deletado\n\n");
-	printf("CPF:\t\t");
-	scanf("%s",cpf);
+	printf("      ---  Deletar Usuário  ---\n");  //Informação para usuário
+	printf("Digite o CPF do usuário a ser deletado\n\n"); //Informação para usuário
+	printf("CPF:\t\t"); //Informação para usuário
+	scanf("%s",cpf); //Scanf = ler string  //%s = Salvar
 		
-	FILE *file;
-	file = fopen(cpf,"r");
-	fclose (file);
+	FILE *file; //FILE = Criar
+	file = fopen(cpf,"r");  //fopen =  abrir //"r" = Lêr
+	fclose (file); // fclose = fechar
 	
-	if (file == NULL)
+	if (file == NULL)  //if = dar função
 	{
-		printf("  ---  Usuario inesistente  ---\n");
+		printf("  ---  Usuario inesistente  ---\n"); //Informação para usuário
 	}
-	else
-		printf("  ---  Usuario Deletado com Sucesso  ---\n");
+	else //else = caso a informação seja falsa
+		printf("  ---  Usuario Deletado com Sucesso  ---\n"); //Informação para usuário
 	
-	remove(cpf);
+	remove(cpf); //deletar
 	
-	system("pause");
+	system("pause"); //congelar tela
 }
 
 int main() //int mai = Função menu 
@@ -214,7 +214,7 @@ int main() //int mai = Função menu
 		printf("\t4 - Sair do sistema");                 //printf = comunicação com usuário
 		printf("\n\nQual a opção desejada:");      //printf = comunicação com usuário
 	
-		scanf("%d", &opcao); //sacanf = pausa o programa enquanto não tem resposta
+		scanf("%d", &opcao); //sacanf = Ler dados  //%d = Armazena no sistema
 	
 		system("cls"); //Apagar tela
 	
@@ -233,13 +233,13 @@ int main() //int mai = Função menu
 			deletar();
 			break;  //Finalizar IF
 			
-			case 4:
-			printf("Obrigado! Tenha um ótimo dia!!\n");
-			return 0;
-			break;
+			case 4: //Inicios de IF
+			printf("Obrigado! Tenha um ótimo dia!!\n\n"); //Informação para usuário
+			return 0; //fechar sistema 
+			break; //Finalizar IF
 			
 			default: //Fim do Encadeamento
-			printf("  ---  Opção Indisponível  ---\n\n");
+			printf("  ---  Opção Indisponível  ---\n\n"); //Informação para usuário
 			system("pause"); //Pausar em uma tela
 			break;	//Finalizar IF
 		}
