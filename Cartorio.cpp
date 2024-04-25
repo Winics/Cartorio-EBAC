@@ -3,6 +3,7 @@
 #include <locale.h>   //bibliteca de alocação de texto por região
 #include <string.h>  //bliblioteca responsavel pelo string
 
+
 			//OBSERVAÇÔES   =   //\n = enter  //\t = espaço  //"Aspas" = texto  //; = confirmar comando 
 			//sacanf = pausa o programa enquanto não tem resposta  //%d = Salva variavel de Numero
 			//definir variaveis  //if = definir opção //switch = Encadeamento de IF's //for = Repetição
@@ -192,57 +193,79 @@ int deletar()  //função
 	
 	system("pause"); //congelar tela
 }
-
+	
 int main() //int mai = Função menu 
-{
+{		
+	setlocale(LC_ALL, "Portuguese");
 	
 	int opcao=0; //int = definir variaveis
-	int x=1;    //int = definir variaveis
+	int x=1;    //int = definir variaveis	
+	int y=1;   //int = definir variaveis	
+	char senha[10]="a"; //int = definir variaveis	
+	int comparacao; //int = definir variaveis	
+	int login = 0;	//int = definir variaveis	
 	
-	for(x=1;x=1;)  //for = Repetição
-	{
+	for(y=1;y=1;) //repetição
+	{	
+		system ("cls");	//limpa tela
+	
+		printf("  ---  Cartório da EBAC  ---\n\n");  //Informação para usuario
+		printf(" ---  Digite sua senha de acesso  ---\n\n"); //Informação para usuario
+		printf("Digitar:"); // Informação para usuario
+	
+		scanf("%s", senha); //salvar informação do usuario como senha
+	
+		comparacao = strcmp(senha, "admin"); //comparacao = variavel //strcmp = compara valor da string
+	
+		if (comparacao == 0) //função real
+		{	
+			system ("cls"); // Limpa tela
 		
-		system("cls"); //Apagar tela
-	
-		setlocale(LC_ALL, "Portuguese"); //setlocale = Seleção de idioma  //LC_ALL = Referência à todos os aspectos da localização
-	
-		printf("  ---  Cartório da EBAC  ---\n\n");         //printf = comunicação com usuário
-		printf("Bem Vindo a EBAC!!\nSelecione a opção do menu:\n\n");    //printf = comunicação com usuário
-		printf("\t1 - Registrar usuário\n");               //printf = comunicação com usuário
-		printf("\t2 - Consultar usuário\n");              //printf = comunicação com usuário
-		printf("\t3 - Deletar usuário\n\n");
-		printf("\t4 - Sair do sistema");                 //printf = comunicação com usuário
-		printf("\n\nQual a opção desejada:");      //printf = comunicação com usuário
-	
-		scanf("%d", &opcao); //sacanf = Ler dados  //%d = Armazena no sistema
-	
-		system("cls"); //Apagar tela
-	
-	
-		switch(opcao)  //switch = Encadeamento de IF's
-		{
-			case 1:  //Inicio de IF
-			registros();
-			break;  //Finalizar IF
+			for(x=1;x=1;)  //for = Repetição	
+			{	
+				setlocale(LC_ALL, "Portuguese"); //setlocale = Seleção de idioma  //LC_ALL = Referência à todos os aspectos da localização
+				system("cls"); //limpa tela
 			
-			case 2:  //Inicio de IF
-			consultar();
-			break;  //Finalizar IF
+				printf("  ---  Cartório da EBAC  ---\n\n");         //printf = comunicação com usuário
+				printf("Bem Vindo a EBAC!!\nSelecione a opção do menu:\n\n");    //printf = comunicação com usuário
+				printf("\t1 - Registrar usuário\n");               //printf = comunicação com usuário
+				printf("\t2 - Consultar usuário\n");              //printf = comunicação com usuário
+				printf("\t3 - Deletar usuário\n\n");
+				printf("\t4 - Sair do sistema");                 //printf = comunicação com usuário
+				printf("\n\nQual a opção desejada:");      //printf = comunicação com usuário
 			
-			case 3: //Inicio de IF
-			deletar();
-			break;  //Finalizar IF
+				scanf("%d", &opcao); //sacanf = Ler dados  //%d = Armazena no sistema
 			
-			case 4: //Inicios de IF
-			printf("Obrigado! Tenha um ótimo dia!!\n\n"); //Informação para usuário
-			return 0; //fechar sistema 
-			break; //Finalizar IF
-			
-			default: //Fim do Encadeamento
-			printf("  ---  Opção Indisponível  ---\n\n"); //Informação para usuário
-			system("pause"); //Pausar em uma tela
-			break;	//Finalizar IF
+				system("cls"); //Apagar tela
+	
+				switch(opcao)  //switch = Encadeamento de IF's
+				{
+					case 1:  //Inicio de IF
+					registros();
+					break;  //Finalizar IF
+					
+					case 2:  //Inicio de IF
+					consultar();
+					break;  //Finalizar IF
+				
+					case 3: //Inicio de IF
+					deletar();
+					break;  //Finalizar IF
+				
+					case 4: //Inicios de IF
+					printf("Obrigado! Tenha um ótimo dia!!\n\n"); //Informação para usuário
+					return 0; //fechar sistema 
+					break; //Finalizar IF
+				
+					default: //Fim do Encadeamento
+					printf("  ---  Opção Indisponível  ---\n\n"); //Informação para usuário
+					system("pause"); //Pausar em uma tela
+					break;	//Finalizar IF
+				}
+			}
 		}
+	else //caso if seja falso
+		printf("Senha incorreta\n\n"); //informação para usuario
+		system ("pause");	//aguarda movimentação de usuaria
 	}
-
 }
